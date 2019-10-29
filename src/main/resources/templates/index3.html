@@ -7,8 +7,12 @@
     <link rel="stylesheet" th:href="@{/css/main.css}"></link>
 </head>
 <body>
-<h1>Prueba</h1>
-<span th:text="${User.user}"></span>
-<span th:text="${User.user}"></span>
+<h1>Usuarios</h1>
+<!--Aqui hago un for each sobre el objeto users-->
+<ul th:each="user: ${Users}">
+    <li th:text="${user.user}"></li>
+    <li th:text="${user.pass}"></li>
+</ul>
+
 </body>
 </html>

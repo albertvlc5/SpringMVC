@@ -27,4 +27,20 @@ class ControladorInicial {
         mav2.addObject("User", User("Pepe","1234"))
         return mav2
     }
+
+    private fun getUsers(): List<User> {
+        val users = ArrayList<User>() ;
+        users.add(User("Xavi","123"))
+        users.add(User("Luis","45678"))
+        users.add(User("Roberto","787"))
+        return users;
+    }
+
+    @GetMapping("/viewList")
+    fun viewList():ModelAndView{
+        var mav3=ModelAndView("index3")
+        mav3.addObject("Users",getUsers())
+        return mav3
+    }
+
 }
