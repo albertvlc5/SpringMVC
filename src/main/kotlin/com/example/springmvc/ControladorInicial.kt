@@ -42,5 +42,11 @@ class ControladorInicial {
         mav3.addObject("Users",getUsers())
         return mav3
     }
+    @GetMapping("/viewLayout")
+    fun viewLayout():ModelAndView{
+        var mav4=ModelAndView("index4")
+        mav4.addObject("Users",getUsers())
+        return mav4
+    }
 
 }
